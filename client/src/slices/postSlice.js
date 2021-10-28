@@ -33,7 +33,7 @@ export const postSlice=createSlice({name: 'post', initialState,
             console.log(action.payload)
             for (var i=0;i<state.replies.length;i++)
             {
-                if (state.replies[i]._id==action.payload.replyId)
+                if (state.replies[i]._id===action.payload.replyId)
                 {
                     state.replies[i]=action.payload.thread
                 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
-const URL="http://localhost:5000"
-
+//const URL="http://localhost:5000"
+const URL="http://gabfestforum.herokuapp.com"
 const jwtToken=localStorage.getItem('gabprofile')
 var parsedToken
 if (jwtToken!=null)
@@ -91,3 +91,5 @@ export const downvote=(id)=>axios.post(`${URL}/post/${id}/downvote`, {data: null
         authorization: 'Bearer '+parsedToken
     }
 })
+
+export const getAllUsers=()=>axios.get(`${URL}/users`)

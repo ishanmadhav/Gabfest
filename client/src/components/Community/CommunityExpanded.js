@@ -36,7 +36,6 @@ export default function CommunityExpanded() {
     return (
         
         <div className="grid grid-cols-7">
-            <button onClick={()=>console.log(posts)}>Click me</button>
             <div className="bg-gray-300"></div>
             <div className="grid col-span-5 grid-cols-3 bg-gray-300">
                 <div className="bg-gray-300 h-8 p-10 w-full col-span-3"></div>

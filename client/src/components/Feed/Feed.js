@@ -38,7 +38,7 @@ export default function Feed() {
             <div className="bg-white col-span-3 border-2 border-gray-400 p-2">
                 <div className="border-gray-400 border-2 m-4 p-3">
                 <span className="flex justify-between"><h1 className="text-xl font-sans font-semibold inline">Your Communities! </h1>  <Link className="inline text-gray-400 hover:underline" to='/communities/joined'>View all</Link> </span>
-                    <div className="grid grid-cols-3 gap-1">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                        {
                            communities.map((community)=>(
                                 <ForumTile name={community.name} description={community.description} id={community._id} posts={community.posts} members={community.members}/>
@@ -49,7 +49,7 @@ export default function Feed() {
                 
                 <div className="border-gray-400 border-2 m-4 p-3">
                 <span className="flex justify-between"><h1 className="text-xl font-sans font-semibold inline">Discover Communities! </h1>  <Link className="inline text-gray-400 hover:underline" to='/communities/all'>View all</Link> </span>
-                    <div className="grid grid-cols-3 gap-1 mb-5">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1 mb-5">
                         {
                             list.slice(0,6).map((community)=>(
                                 <ForumTile name={community.name} description={community.description} id={community._id} posts={community.posts} members={community.members}/>
@@ -60,7 +60,7 @@ export default function Feed() {
                 
                 <div className="border-gray-400 border-2 m-4 p-3">
                     <span className="flex justify-between"><h1 className="text-xl font-sans font-semibold inline">General Discussion </h1>  <Link className="inline text-gray-400 hover:underline" to='/communities/all'>View all</Link> </span> 
-                    <div className="grid grid-cols-3 gap-1">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                         <ForumTile />
                         <ForumTile />
                         <ForumTile />

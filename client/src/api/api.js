@@ -1,6 +1,6 @@
 import axios from 'axios'
 //const URL="http://localhost:5000"
-const URL="http://gabfestforum.herokuapp.com"
+const URL="https://gabfestforum.herokuapp.com"
 const jwtToken=localStorage.getItem('gabprofile')
 var parsedToken
 if (jwtToken!=null)
